@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        th , td , tr {
+           border: 1px solid;
+  
+        }
+    </style>
+</head>
+<body>
+    
+<input type="text" placeholder="Enter name" name="" id="name">    
+<input type="number"placeholder = "Eenter number" id="number">
+<button onclick="addphone()">Save phone</button>
+<h1>phone book</h1>
+<table style="border: 1px solid black;" id="book"></table >         
+
+    <script>
+        
+        let phonebook = [];
+        
+
+        function addphone() {
+           const name = document.getElementById("name").value;
+           const phone =  document.getElementById("number").value ;
+  
+           if(!name || !phone) {
+              return alert("plz Enter name and phone");
+           }
+   
+           if(phone.length != 10) {
+              return alert("plz Enter 10 digit number");
+            }else{
+              
+              phonebook.push({name, phone});
+              alert("phone addad");
+
+              document.getElementById("name").value = "";
+              document.getElementById("number").value = "" ;
+  
+              display();
+            }
+
+            
+            
+
+        }   
+        function display() {
+          let data = "<tr><th>Name</th><th>Phone</th><th>Operation</th><tr>"
+          for (let p of phonebook) {
+           data+= `<tr><td>${p.name}</td><td>${p.phone}</td><td><button onclick ='remove("${p.name}")'>X</button></td></tr>`
+          }
+          document.getElementById('book').innerHTML = data;
+          if(phonebook.length == 0) {
+            document.getElementById("book").innerHTML = "";
+          }
+          
+
+        }
+   
+        function remove(name) {
+           const indx = phonebook.findIndex(function(value) {
+              return value.name == name ;
+           })
+
+           if(indx >= 0) {
+              phonebook.splice(indx,1);
+              alert("Are you sure - delete " + name   );
+              display();
+              
+           }
+
+        }
+
+    </script>
+
+    
+    
+</body>
+</html>

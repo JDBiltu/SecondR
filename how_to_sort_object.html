@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=-+, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+        const st = [
+        {id : 23 , name :"sonam" , age :34},
+        {id : 13, name : "alex" , age :39},
+        {id : 78, name : "devid" , age : 15}
+       ]
+ 
+       const idsort = st.sort(function(a,b){
+       return a.id-b.id;
+       })
+ 
+       console.log(idsort);
+ 
+       const nameSort= st.sort(function(a,b){
+       return a.name.localeCompare(b.name);
+       })
+       console.log("Sorted on basic of Name: ",nameSort)
+ 
+ 
+ 
+</script>
+    
+</body>
+</html>

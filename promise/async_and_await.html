@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    function Age(age) {
+
+        const Data = new Promise(function (apro, rej) {
+            if(age >= 18) {
+                apro('valid.. age........');
+            }
+            else {
+                rej(' age is ...Not valid........');
+            }
+    
+        })
+    
+    
+        return Data;
+    
+       
+    
+    }
+    
+    async function isvalid(age) {
+       
+        try {
+    
+            var u = await Age(age)  
+            console.log(u);
+            
+    
+            
+        } catch (error) {
+            console.log(error)
+            
+        }
+       
+    
+    }
+    
+    isvalid(18);
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+       console.log("program start");
+       setTimeout(fetchData,5000);
+
+       function fetchData() { 
+          console.log("Data Fetched sccessfully");
+          setTimeout(callbak,6000);
+
+       }
+
+       function callbak() {
+          console.log("pogram stopped");
+       }       
+    </script>
+    
+</body>
+</html>

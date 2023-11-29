@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pre {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="show()">click</button>
+    <div></div>
+
+    <script>
+        function show() {
+            var div = document.querySelector('div');
+            var sh = document.createElement('p')
+            sh.className = 'pre';
+           div.appendChild(sh);
+        }
+       
+    </script>
+    
+</body>
+</html>

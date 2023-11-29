@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+    var student = {
+        name : "jayendra",
+        last_name : "dey" ,
+        age : 22,
+        roll_no : 12,
+        subject : "English"
+    }
+    
+    alert(JSON.stringify(student,null  , 4));
+    delete student.age;
+    delete student.subject;
+    alert(JSON.stringify(student , null , 4));
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+  <button id="time">00:00</button>
+  <button onclick="show_time()" id="hy">Start</button>
+  <button onclick="stop_time()">Stop</button>
+
+
+    <script>
+        
+        var ti ;
+        var second;
+        var minutes;
+
+
+
+        function show_time() {
+
+            var show = document.getElementById("time") ;
+
+            second = 0;
+            minutes = 0;
+
+
+            ti = setInterval(() => {
+
+                second++;
+                if(second == 3) {
+                    minutes++;
+                    second = 0;
+                }
+     
+      
+                show.innerText = (minutes < 10 ? ` 0${minutes}`  : ` ${minutes}`) + ":" + (second < 10 ? `0${second}` : `${second}`) ;
+
+            }, 1000);
+
+        }
+
+        function stop_time() {
+
+            clearInterval(ti);
+            alert(`${(minutes <10)? "0"+ minutes : minutes }` +  ":" +   ` ${(second <10)? "0"+ second : second }`) ;
+        
+        }
+    
+
+
+    </script>
+    
+</body>
+</html>

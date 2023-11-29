@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     
+  <button onmouseover="add()"  onmouseleave="remove()">hovor me</button>
+  
+  <div id="d"></div>
+
+
+
+
+
+    <script>
+        function add() {
+           var div = document.getElementById("d");
+        
+           var u = document.createElement('h1');
+           u.textContent = 'hello you are on me';
+           div.appendChild(u);
+        }
+        
+        function remove() {
+           var div = document.getElementById("d");
+        
+           var u = document.querySelector('div h1');
+        
+           div.removeChild(u);
+        }
+    </script>
+    
+</body>
+</html>

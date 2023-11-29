@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fatchdata(cb) {
+            setTimeout(() => {
+                console.log("Data fetched");
+                setTimeout(() => {cb()}, 3000);
+                
+            }, 4000);
+
+            
+        }
+        function display() {
+            console.log("program display");
+        }
+
+        fatchdata(display);
+    </script>
+</body>
+</html>

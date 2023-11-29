@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+    <button onclick="clickhere()" >hello</button>
+     <input type="text" name="" id="get" placeholder="write here">
+     
+  <div id="box" >
+  </div>
+
+  <script>
+    
+function clickhere() {
+
+var geti = document.getElementById("get").value;
+
+var arr = [];
+arr = geti.split("");
+
+const rev = arr.reverse();
+console.log(rev)
+const revstr = rev.join("");
+if(geti == revstr) {
+   document.getElementById("box").innerHTML = "pallindrom";
+}else {
+   document.getElementById("box").innerHTML = " not a pallindrom";
+}
+
+
+}
+  </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+<button id="mybtn">Try it</button>
+
+<div id="display">
+
+</div>
+
+
+<script>
+    var element = document.getElementById("mybtn");
+
+    element.addEventListener("mouseover",mous);
+    element.addEventListener("mousedown",clik);
+    element.addEventListener("mouseout",mouo);
+    document.addEventListener("mouseup" , mousuo)
+    
+    function mous() {
+        document.getElementById("display").innerHTML = "mouse over";
+        document.body.style.backgroundColor = "red";
+    
+    }
+    function clik() {
+        document.getElementById("display").innerHTML =("mouse clic");
+        document.body.style.backgroundColor = "orange";
+    }
+    function mouo() {
+        document.getElementById("display").innerHTML =("mouse out");
+        document.body.style.backgroundColor = "white";
+    }
+    function mousuo() {
+        document.getElementById("display").innerHTML =("mouse up");
+        document.body.style.backgroundColor = "white";
+    
+    
+    }
+    
+</script>
+    
+</body>
+</html>

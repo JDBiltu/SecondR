@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        const Data  = fetch('https://jsonplaceholder.typicode.com/users');
+
+
+        Data
+        .then((acp)=> {
+            // return acp.json();
+             return acp.json();
+        
+        })
+        .then((orig_data)=> {
+            console.log(orig_data);
+        })
+        .catch((error)=> {
+            console.log(error);
+        })
+        
+    </script>
+    
+</body>
+</html>
